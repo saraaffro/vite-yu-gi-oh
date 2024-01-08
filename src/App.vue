@@ -54,7 +54,7 @@ export default {
 @use './styles/partials/variables' as *;
 
 main {
-  padding-top: 70px;
+  padding: 120px 0 50px;
   background-color: $main-color;
 
   .container {
