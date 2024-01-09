@@ -6,6 +6,7 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
 import ListItems from './components/ListItems.vue'
 import AppSearch from './components/AppSearch.vue'
+import AppResult from './components/AppResult.vue'
 
 // importo store
 import { store } from './store';
@@ -15,7 +16,8 @@ export default {
   components: {
     AppHeader,
     ListItems,
-    AppSearch
+    AppSearch,
+    AppResult
   },
   data() {
     return {
@@ -72,6 +74,7 @@ export default {
   <main>
     <div class="container">
       <AppSearch @filter="getCard" />
+      <AppResult />
       <ListItems />
     </div>
 

@@ -1,6 +1,7 @@
 <script >
 import SingleItem from '../components/SingleItem.vue'
 
+
 // importo store
 import { store } from '../store';
 
