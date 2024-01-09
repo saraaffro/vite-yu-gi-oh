@@ -5,6 +5,7 @@ import axios from 'axios';
 // importo componenti
 import AppHeader from './components/AppHeader.vue'
 import ListItems from './components/ListItems.vue'
+import AppSearch from './components/AppSearch.vue'
 
 // importo store
 import { store } from './store';
@@ -14,6 +15,7 @@ export default {
   components: {
     AppHeader,
     ListItems,
+    AppSearch
   },
   data() {
     return {
@@ -22,11 +24,23 @@ export default {
   },
   methods: {
     getCard() {
+      let myURL = store.apiURL;
+
       axios
-        .get(store.apiURL)
+        .get(myURL)
         .then((res => {
           // console.log(res.data.data);
           store.cardList = res.data.data;
+        }))
+        .catch((err) => {
+          console.log("errori", err);
+        })
+
+      axios
+        .get(store.optionApiURL)
+        .then((res => {
+          console.log(res.data);
+          store.optionApiURL = res.data;
         }))
         .catch((err) => {
           console.log("errori", err);
@@ -43,6 +57,7 @@ export default {
   <AppHeader />
   <main>
     <div class="container">
+      <AppSearch />
       <ListItems />
     </div>
 
