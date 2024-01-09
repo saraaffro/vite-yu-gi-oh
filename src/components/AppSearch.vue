@@ -13,13 +13,10 @@ export default {
 </script>
 
 <template>
-    <!-- <input type="text" placeholder="Cerca carta" v-model="store.searchText">
-    <button type="submit" @click.prevent="$emit('search')">cerca</button>
-    <button type="reset">reset</button> -->
-
-    <select>
+    <select v-model="store.searchText" @change="$emit('filter')">
         <option value="" selected>Filtra Archetype</option>
-        <option value="" v-for="(type, i) in store.optionApiURL">{{ type.archetype_name }}</option>
+        <option v-for="(type, i) in store.archList" :key="i" :value="type.archetype_name">{{ type.archetype_name
+        }}</option>
     </select>
 </template>
 
