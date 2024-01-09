@@ -19,9 +19,9 @@ export default {
 
 <template>
     <div class="row">
-        <div class="card" v-for="card in store.cardList" :key="card.id">
+        <a href="#" class="card" v-for="card in store.cardList" :key="card.id">
             <SingleItem :info="card" />
-        </div>
+        </a>
     </div>
 </template>
 

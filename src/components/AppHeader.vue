@@ -7,10 +7,10 @@ export default {
 
 <template>
     <header>
-        <div class="img-container">
+        <a href="#" class="img-container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Yu-Gi-Oh%21_%28Logo%29.jpg/640px-Yu-Gi-Oh%21_%28Logo%29.jpg"
                 alt="logo">
-        </div>
+        </a>
         <h1>Yu-Gi-Oh Api</h1>
     </header>
 </template>
